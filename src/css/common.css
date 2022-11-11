@@ -16,3 +16,70 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.flex {
+display: flex;
+}
+#datetime-picker {
+  margin-bottom: 20px;
+}
+
+button {
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  margin: 0 20px;
+  margin-top: 30px;
+  background:  rgb(131, 22, 113);
+  color:  rgb(247, 240, 245);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+ }
+
+button:disabled {
+  margin: 0 20px;
+  margin-top: 30px;
+  background: rgb(247, 223, 240);
+  color:  rgb(187, 121, 176);
+  box-shadow: none;
+}
+
+input {
+  height: 50px;
+ margin-top: 30px;
+  text-align: center;
+  font-size: large;
+  border-radius: 8px;
+  border-color:rgb(187, 121, 176);
+  color: rgb(131, 22, 113);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.timer {
+  display: flex;
+  margin-left: 20px;
+   }
+
+  
+  .value {
+    color: rgb(131, 22, 113);
+    font-weight: 400;
+    font-size: 55px;
+  }
+  
+  .label {
+    color: rgb(131, 22, 113);
+    font-weight: 400;
+    font-size: 20px;
+  }
+ 
