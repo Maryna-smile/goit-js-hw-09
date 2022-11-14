@@ -19,17 +19,15 @@ img {
 
 .flex {
 display: flex;
+align-items: center;
 }
-#datetime-picker {
-  margin-bottom: 20px;
-}
+
 
 button {
   border-radius: 10px;
   width: 150px;
   height: 50px;
   margin: 0 20px;
-  margin-top: 30px;
   background:  rgb(131, 22, 113);
   color:  rgb(247, 240, 245);
   text-transform: uppercase;
@@ -40,15 +38,13 @@ button {
 
 button:disabled {
   margin: 0 20px;
-  margin-top: 30px;
-  background: rgb(247, 223, 240);
+   background: rgb(247, 223, 240);
   color:  rgb(187, 121, 176);
   box-shadow: none;
 }
 
 input {
   height: 50px;
- margin-top: 30px;
   text-align: center;
   font-size: large;
   border-radius: 8px;
@@ -56,14 +52,20 @@ input {
   color: rgb(131, 22, 113);
 }
 
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
 .field {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 10px;
+   padding: 10px;
   margin-right: 10px;
   font-weight: 700;
 }
+
 
 .timer {
   display: flex;
