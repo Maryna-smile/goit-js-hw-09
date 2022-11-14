@@ -1,6 +1,9 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+require("flatpickr/dist/themes/dark.css");
 import Notiflix from 'notiflix';
+
+
 
 const date = document.querySelector('#datetime-picker');
 const btn = document.querySelector('[data-start]');
@@ -19,6 +22,7 @@ flatpickr(date, {
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose(selectedDates) {
+        
         if (selectedDates[0] <= Date.now()) {
             Notiflix.Notify.failure('Please choose a date in the future');
             btn.disabled = true;
@@ -41,10 +45,10 @@ function onBtnStartClick() {
         const timeToFinish = choosenDate - Date.now();
         const { days, hours, minutes, seconds } = convertMs(timeToFinish);
 
-        day.textContent = addZero(days);
-        hour.textContent = addZero(hours);
-        min.textContent = addZero(minutes);
-        sec.textContent = addZero(seconds);
+        day.textContent = addLeadingZero(days);
+        hour.textContent = addLeadingZero(hours);
+        min.textContent = addLeadingZero(minutes);
+        sec.textContent = addLeadingZero(seconds);
 
         if (timeToFinish < 1000) {
             clearInterval(timerId);
@@ -53,7 +57,7 @@ function onBtnStartClick() {
     }, 1000);
 }
 
-function addZero(value) {
+function addLeadingZero(value) {
     return `${value}`.padStart(2, '0');
 }
 
