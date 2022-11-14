@@ -29,6 +29,7 @@ function onSubmitForm(e) {
   e.currentTarget.reset();
 }
 
+
 function createPromise(position, delay) {
   return new Promise((res, rej) => {
     const shouldResolve = Math.random() > 0.3;

@@ -2,7 +2,7 @@ function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   }
 const btnStartRef = document.querySelector('[data-start]');
-const btnStopRef = document.querySelector('[data-stop]');
+const btnStop = document.querySelector('[data-stop]');
 const bodyRef = document.querySelector('body');
 
 btnStartRef.addEventListener('click', () => {
@@ -13,7 +13,7 @@ btnStartRef.addEventListener('click', () => {
 }
 );
 
-btnStopRef.addEventListener('click', () => {
+btnStop.addEventListener('click', () => {
     clearInterval(timerId);
     btnStartRef.disabled = false;
 
